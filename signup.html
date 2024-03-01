@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitnessHub-SignUp</title>
+  <link rel="icon" href="img/text-logo.png" type="image/x-icon" width="40px" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <style>
+    .bg-orange {
+      background-color: #f36100;
+    }
+
+    .orange {
+      color: #f36100;
+    }
+
+    .main-bg {
+      background-image: url(img/main-sign.jpg);
+      background-size: cover;
+
+    }
+
+    .form {
+
+      background-color: rgba(0, 0, 0, 0.281);
+      margin-top: 35px;
+      padding: 50px 40px 40px;
+    }
+
+    .inn-form {
+      border: 0px solid black;
+      background-color: rgba(255, 255, 255, 0.041);
+
+
+    }
+
+    .submit-btn {
+      border: 0px solid transparent;
+
+      background-color: #f36100;
+      font-weight: 600;
+    }
+
+    .submit-btn:hover {
+      transition: all ease 0.4s;
+      color: black !important;
+    }
+
+    .condition {
+      color: rgba(230, 34, 34, 0.466);
+    }
+    ::placeholder
+    {
+      color:black;
+      opacity: 1;
+    }
+    ::ms-input-placeholder{
+      color: black;
+    }
+  </style>
+</head>
+
+<body style="background-color: black">
+  <div class="col-md-12 row mx-auto main-bg ">
+    
+  </div>
+
+  <div class="main-bg">
+    <div class="">
+      <div class="text-center text-light pt-5">
+        <h1><span class="orange">FIT</span>HUB Membership Form</h1>
+        <p class="pt-2">
+          Want to become a member of <span class="orange">FIT</span>HUB Training
+          Center? Then start by filling our form to<br />complete registration.
+          We will contact you shortly to notify you about your membership.
+        </p>
+      </div>
+      <div class="col-md-6 text-light mx-auto form">
+        <form action="" id="loginForm" onsubmit="validateLogin(); return false;">
+        <label for="firstName">Name</span></label><br />
+        <input type="text" name="nm" id="firstName" placeholder="First" size="31" class="py-2 mt-2 ps-2 inn-form text-light  " required />
+        <input type="text" class="ms-2 pe-2 py-2 ps-2 inn-form text-light" name="nm" id="lastName" placeholder="Last" size="30"
+          required /><br />
+
+        <label for="password" class="mt-4">Create Password</label><br />
+        <input type="password" id="password" name="pass" size="70" placeholder="Ex-Abc@1234" class="py-2 mt-2 inn-form ps-2 text-light"
+          maxlength="15" required /><br />
+        <ul class="mt-2 condition">
+          <li>Must be at least 8 characters long.</li>
+          <li>Must contain an lowercase letter.</li>
+          <li>Must contain an uppercase letter.</li>
+          <li>Must Contain a number or special character.</li>
+        </ul>
+
+        <label for="weight" class="mt-3">Weight(kg)</label><br />
+        <input type="text" id="weight" name="weight" size="71" class=" text-light py-2 mt-2 inn-form" maxlength="7"
+          required /><br />
+
+        <label for="height" class="mt-4">Height(cm)</label><br />
+        <input type="text" id="height" name="weight" size="71" class="py-2 mt-2 inn-form text-light" maxlength="7"
+          required /><br />
+
+        <label for="bmi" class="mt-4">BMI</label><br />
+        <input type="text" name="bmi" id="bmi" size="71" class="py-2 mt-2 inn-form text-light" required /><br />
+
+        <label for="age" class="mt-4">Age</label><br />
+        <input type="text" name="age" id="age" size="71" class="py-2 mt-2 inn-form text-light" maxlength="2" required /><br />
+
+        <label for="male" class="mt-4">Gender</label><br />
+        <input type="radio" name="gender" id="male" value="Male" class="mt-2 " required />
+        <label for="male">Male</label><br />
+        <input type="radio" name="gender" id="female" value="Female" class="mt-2" />
+        <label for="female">Female</label><br />
+        <input type="radio" name="gender" id="other" value="Other" class="mt-2" />
+        <label for="other">Other</label><br />
+
+        <label for="streetAddress" class="mt-4">Home Address</label><br />
+        <input type="text" name="add" id="streetAddress" placeholder="Street Address" size="70" class="py-2 mt-2 ps-2 inn-form text-light"
+          required /><br />
+        <input type="text" name="add2" id="streetAddressLine2" placeholder="Street Address Line2" size="70"
+          class="py-2 mt-2 ps-2 inn-form text-light" required /><br />
+        <input type="text" name="city" id="city" placeholder="City" size="31" class="py-2 mt-2 ps-2 inn-form text-light" required />
+        <input type="text" class="py-2 mt-2 ms-2 pe-2 ps-2 inn-form text-light" name="state" id="state" placeholder="State" size="30"
+          required /><br />
+        <input type="text" name="pincd" id="postalCode" placeholder="Postal / Pin Code" size="70"
+          class="py-2 mt-2 ps-2 inn-form text-light" required /><br />
+
+        <label for="phoneNumber" class="mt-4">Phone Number</label><br />
+        <input type="text" name="phn" id="phoneNumber" size="71" class="py-2 mt-2 inn-form text-light" required /><br />
+
+        <label for="emailAddress" class="mt-4">Email Address</label><br />
+        <input type="email" name="eml" id="emailAddress" size="71" class="py-2 mt-2 inn-form text-light" required /><br />
+
+        <label for="reqPersonalTrainerYes" class="mt-4">Do you require a personal trainer?</label><br />
+        <input type="radio" name="trainer" id="reqPersonalTrainerYes" value="Yes" class="mt-2 inn-form text-light" required />
+        <label for="reqPersonalTrainerYes">Yes</label><br />
+        <input type="radio" name="trainer" id="reqPersonalTrainerNo" value="No" class="mt-2 inn-form" required />
+        <label for="reqPersonalTrainerNo">No</label><br />
+
+        <label for="gymYes" class="mt-4">Have you been in a Gym before?</label><br />
+        <input type="radio" name="gym" id="gymYes" value="Yes" class="mt-2" required />
+        <label for="gymYes">Yes</label><br />
+        <input type="radio" name="gym" id="gymNo" value="No" class="mt-2" required />
+        <label for="gymNo">No</label><br />
+
+        <input type="checkbox" name="check" id="check" class="mt-4" /> I have
+        Read Understand and Agree to the Grace Transformation Challenge Rules
+        and Regulations. <br />
+
+        <div class="text-center mt-2">
+          <input type="button" id="signup" value="Apply" class="mt-5 px-5 py-2 submit-btn text-light mb-2" /><br>
+          <span class="text-light ">Already have an account?</span> <a href="login.html" class="text-decoration-none ">
+            Log In. 
+          </a>
+        </div>
+      </form>
+      </div>
+    </div>
+    <br><br><br>
+  </div>
+  <script type="module">
+ 
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+    import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAoSpfcUsFTeQaZkGdedeXmyJ_-c35dtyU",
+      authDomain: "final-project-b319f.firebaseapp.com",
+      projectId: "final-project-b319f",
+      storageBucket: "final-project-b319f.appspot.com",
+      messagingSenderId: "45250701658",
+      appId: "1:45250701658:web:ac76a37ed291d2184fab63",
+      measurementId: "G-26L0YN4TSW"
+    };
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    const analytics = getAnalytics(app);
+
+    const getFormValues = () => {
+      const firstName = document.getElementById('firstName').value || '';
+      const lastName = document.getElementById('lastName').value || '';
+      const password = document.getElementById('password').value || '';
+      const weight = document.getElementById('weight').value || '';
+      const height = document.getElementById('height').value || '';
+      const bmi = document.getElementById('bmi').value || '';
+      const age = document.getElementById('age').value || '';
+      const gender = document.querySelector('input[name="gender"]:checked')?.value || ''
+      const streetAddress = document.getElementById('streetAddress').value || ''
+      const streetAddressLine2 = document.getElementById('streetAddressLine2').value || ''
+      const city = document.getElementById('city').value || ''
+      const state = document.getElementById('state').value || ''
+      const postalCode = document.getElementById('postalCode').value || ''
+      const phoneNumber = document.getElementById('phoneNumber').value || ''
+      const emailAddress = document.getElementById('emailAddress').value || ''
+      const trainer = document.querySelector('input[name="trainer"]:checked')?.value || ''
+      const gym = document.querySelector('input[name="gym"]:checked')?.value || ''
+      const TandC = document.getElementById('check').value || '';
+
+      return {
+        firstName: firstName,
+        lastName: lastName,
+        password: password,
+        weight: weight,
+        height: height,
+        bmi: bmi,
+        age: age,
+        gender: gender,
+        streetAddress: streetAddress,
+        streetAddressLine2: streetAddressLine2,
+        city: city,
+        state: state,
+        postalCode: postalCode,
+        phoneNumber: phoneNumber,
+        emailAddress: emailAddress,
+        trainer: trainer,
+        gym: gym,
+        TandC: TandC
+      }
+    }
+
+    const validateForm = () => {
+      const formData = getFormValues();
+
+      // Check if any of the required fields are empty
+      if (!formData.firstName
+              || !formData.lastName
+              || !formData.password
+              || !formData.weight
+              || !formData.height
+              || !formData.bmi
+              || !formData.age
+              || !formData.gender
+              || !formData.streetAddress
+              || !formData.streetAddressLine2
+              || !formData.city
+              || !formData.state
+              || !formData.postalCode
+              || !formData.phoneNumber
+              || !formData.emailAddress
+              || !formData.trainer
+              || !formData.gym
+              || !formData.TandC
+      ) {
+        alert('Please fill in all the fields.');
+        return false;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.emailAddress)) {
+        alert('Please enter a valid email address.');
+        return false;
+      }
+
+      return true;
+    }
+
+    const submitForm = async () => {
+      if(!validateForm()) {
+        return;
+      }
+      const formData = getFormValues();
+      try {
+        // Create a user account using Firebase Authentication
+        const userCredential = await createUserWithEmailAndPassword(auth, formData.emailAddress, formData.password);
+
+        // Get the user ID
+        const userId = userCredential.user.uid;
+
+        // Store additional user data in Firestore
+        await setDoc(doc(db, 'usersSignupData', userId), formData);
+
+        alert('Success! You are successfully signedup');
+        window.location.href='login.html'
+      } catch (error) {
+        if(error.code === 'auth/email-already-in-use') {
+          alert('The email address is already in use.');
+          return;
+        }
+        alert('Error creating account: ' + error.message);
+      }
+    }
+
+    document.getElementById('signup').addEventListener('click', async (event) => {
+      await submitForm();
+      console.log('Form submitted successfully')
+    })
+
+
+    
+  </script>
+</body>
+
+</html>

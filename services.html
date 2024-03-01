@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitnessHub-Services</title>
+  <link rel="icon" href="img/text-logo.png" type="image/x-icon" width="40px">
+
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <style>
+    .nav-bg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+    }
+
+    .my-link:hover {
+      transition: all 0.3s;
+
+      color: #f36100 !important;
+    }
+
+    .padding-nav {
+      padding-top: 160px;
+      padding-bottom: 160px;
+    }
+
+    .orange {
+      color: #f36100;
+    }
+
+    .contact-bar {
+      background-color: #0a0a0a;
+      padding-top: 30px;
+      padding-right: 0px;
+      padding-bottom: 15px;
+      padding-left: 0px;
+    }
+
+    .con-rt {
+      float: left;
+    }
+
+    .footer {
+      background-color: black;
+      padding-top: 55px;
+      padding-bottom: 25px;
+    }
+
+    .ft-link:hover {
+      color: #f36100 !important;
+    }
+
+    .section-title {
+      margin-bottom: 45px;
+      text-align: center;
+    }
+
+    .services-section {
+      background: #151515;
+    }
+
+    .spad {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+      border-style: none;
+    }
+
+    .mm {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .mm1 {
+      background-color: #252525;
+    }
+
+    .mm1:hover {
+      transition: all 0.7s;
+
+      background-color: #363636;
+    }
+
+    .pricing-section {
+      background-color: #151515;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .pricing-section .section-title {
+      margin-bottom: 56px;
+    }
+
+    .ps-item {
+      text-align: center;
+      color: white;
+      padding: 40px 30px;
+      border: 1px solid #464646;
+      -webkit-transform: skewY(-4deg);
+      -ms-transform: skewY(-4deg);
+      transform: skewY(-4deg);
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .ps-item .ps-price {
+      margin-bottom: 30px;
+      -webkit-transform: skewY(4deg);
+      -ms-transform: skewY(4deg);
+      transform: skewY(4deg);
+    }
+
+    .primary-btn2 {
+      display: inline-block;
+      font-size: 14px;
+      padding: 17px 30px 16px;
+      background: #333333;
+      line-height: normal;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: all ease 0.2;
+    }
+
+    .primary-btn2:active {
+      scale: 0.9;
+    }
+
+    .ps-item .primary-btn2 .pricing-btn {
+      display: block;
+      background: #333333;
+      -webkit-transform: skewY(4deg);
+      -ms-transform: skewY(4deg);
+      transform: skewY(4deg);
+    }
+
+    .primary-btn2:hover {
+      background-color: #f36100 !important;
+    }
+
+    .price:hover {
+      color: black !important;
+      background-color: #c4c4c4 !important;
+    }
+
+    .play-btn {
+      display: inline-block;
+      height: 70px;
+      width: 70px;
+      background: #f36100;
+      border-radius: 50%;
+      line-height: 70px;
+      text-align: center;
+      font-size: 36px;
+      color: #ffffff;
+    }
+
+    .vid {
+      background-image: url(img/bg2.jpg);
+    }
+
+    .member {
+      background-color: #f36100;
+      border-radius: 4px;
+      box-shadow: 0 0 0px #f36100,
+        0 0 0px #f36100;
+    }
+
+    .member:hover {
+      transition: all 0.2s;
+
+      box-shadow: 0 0 5px #f36100,
+        0 0 25px #f36100;
+    }
+    .font4
+      {
+        font-size: 13px;
+      }
+  </style>
+</head>
+
+<body>
+  <!-- NAV BAR START -->
+  <div class="bg-danger pt-5 nav-bg" style="background-image: url(img/service-main.jpg)">
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <img src="img/logo.png" alt="gym logo" width="200px" />
+      </div>
+      <div class="col-md-6 pt-2">
+        <a href="index.html" class="text-decoration-none text-light my-link mx-3">
+          HOME</a>
+        <a href="about.html" class="text-decoration-none text-light my-link mx-3">
+          ABOUT US</a>
+        <a href="classes.html" class="text-decoration-none text-light my-link mx-3">
+          CLASSES</a>
+        <a href="services.html" class="text-decoration-none text-light my-link mx-3">
+          SERVICES</a>
+        <a href="team.html" class="text-decoration-none text-light my-link mx-3">
+          OUR TEAM</a>
+
+        <a href="contact.html" class="text-decoration-none text-light my-link mx-3">
+          CONTACT</a>
+      </div>
+      <div class="col-md-2 text-center pt-3">
+        <a href="login.html" target="_blank" class="text-decoration-none text-dark member py-3 px-4"><b> BECOME A MEMBER
+          </b></a>
+      </div>
+      <div class="col-md-1 text-center">
+        <a href="dashboard.html">
+          <img src="img/user.png" class="mb-5" alt=""  width="50px">
+        </a>
+      </div>
+    </div>
+
+    <div class="row text-center padding-nav">
+      <h1 class="text-light">SERVICES</h1>
+      <div class="row col-md-12">
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+          <a href="index.html" class="text-decoration-none text-light"><b> Home </b> ></a>
+          <p style="display: inline-block" class="orange">Services</p>
+        </div>
+        <div class="col-md-5"></div>
+      </div>
+    </div>
+  </div>
+  <!-- NAV BAR END -->
+
+  <!-- SECTION BAR START -->
+  <section class="services-section spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <span class="orange">WHAT WE DO?</span>
+            <h2 class="text-light">PUSH YOUR LIMITS FORWARD</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mm">
+          <div class="   ">
+            <img src="img/services-1.jpg.webp" alt="" width="500px" />
+          </div>
+        </div>
+        <div class="col-md-3 mm1">
+          <div class="pt-4 px-3 text-light">
+            <br /><br />
+            <h4>Personal training</h4>
+            <p>
+              If you’re looking to take your <br> fitness to the next level, you may be wondering whether hiring a
+              personal trainer is right for you.
+
+
+            </p>
+            <a href="#" class="text-decoration-none text-light my-link">EXPLORE</a>
+          </div>
+        </div>
+        <div class="col-md-3 mm">
+          <div class="text-center">
+            <img src="img/services-2.jpg.webp" alt="" width="500px" />
+          </div>
+        </div>
+        <div class="col-md-3 mm1">
+          <div class="pt-4 px-3 text-light">
+            <br /><br />
+            <h4>Group fitness classes</h4>
+            <p>
+              You either love it or you hate it. If you’re not already <br> sold on the idea of getting sweaty with a
+              bunch of strangers, we’re here to change your mind
+            </p>
+            <a href="#" class="text-decoration-none text-light my-link">EXPLORE</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mm1">
+          <div class="pt-4 px-3 text-light">
+            <br /><br />
+            <h4>Strength training</h4>
+            <p>
+              You don't need to spend hours a day lifting weights to benefit from strength training. You can see
+              significant improvement in your strength with just two or three 20- or 30-minute strength training
+              sessions a week.
+            </p>
+            <a href="#" class="text-decoration-none text-light my-link">EXPLORE</a>
+          </div>
+        </div>
+        <div class="col-md-3 mm">
+          <div class="text-center">
+            <img src="img/services-3.jpg.webp" alt="" width="500px" />
+          </div>
+        </div>
+        <div class="col-md-3 mm1">
+          <div class="pt-4 px-3 text-light">
+            <br /><br />
+            <h4>Body building</h4>
+
+            The Mental And Physical Benefits.
+            Bodybuilding is a great way to keep yourself balanced, giving your body proportion, shaping and helping
+            general fitness
+            <a href="#" class="text-decoration-none text-light my-link">EXPLORE</a>
+          </div>
+        </div>
+        <div class="col-md-3 mm">
+          <div class="text-center">
+            <img src="img/services-4.jpg.webp" alt="" width="500px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION BAR END -->
+
+  <!-- VIDEO BAR START -->
+  <section class="vid">
+    <div class="container text-center">
+      <div class="col-md-12 text-light">
+        <br><br><br> <br><br><br><br><br>
+
+        <h2>EXERCISE UNTIL THE BODY OBEYS.</h2>
+        <div class="pt-3">
+          WHERE HEALTH, BEAUTY AND FITNESS MEET.
+        </div>
+        <br>
+        <a href="https://youtu.be/HQfF5XRVXjU?si=91mJXmISj7yo1jdE" class="play-btn " target="_blank">
+          <img src="img/play.png" alt="" class=" ps-1 pb-2" width="39px">
+        </a>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br>
+  </section>
+
+  <!-- VIDEO BAR END -->
+
+  <!-- PRICING BAR START -->
+ 
+  <section class="pricing-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title text-center">
+            <span class="orange">OUR PLAN</span>
+            <h2 class="text-light">CHOOSE YOUR PRICING PLAN</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-3 col-md-8 ps-item price mx-auto">
+          <div class="">
+            <h3 class=" ">Basic plan</h3>
+            <h2 class="orange">$20/Month</h2>
+            <span class=" ">SINGLE CLASS</span>
+          </div>
+          <div class="ps-price text-center pt-2 ms-4">
+            
+          </div>
+          <p><b>ACCESS :</b></p>
+          <ul>
+            <li>Basic gym equipment</li>
+            <li>Cardio area</li>
+            <li>General fitness classes (if available)</li>
+        </ul>
+          <a
+            href=""
+            class="primary-btn2 pricing-btn text-center text-light text-decoration-none px-5 mt-2"
+            >Enroll Now</a
+          >
+        </div>
+        <div class="col-lg-3 col-md-8 ps-item price mx-auto">
+          <div class="">
+            <h2>Premium Plan</h2>
+            <h2 class="orange">$80/Month</h2>
+            <span class=" ">SINGLE CLASS</span>
+          </div>
+          <div class="ps-price text-center pt-2 ms-4">
+           
+          </div>
+          <p><b>ACCESS :</b></p>
+          <ul>
+            <li>Exclusive access to all gym facilities</li>
+            <li>Priority scheduling for classes and trainers</li>
+            <li>Individualized training sessions</li>
+            <li>Nutritional counseling</li>
+        </ul>
+          <a
+            href=""
+            class="primary-btn2 pricing-btn text-center text-light text-decoration-none px-5 mt-2"
+            >Enroll Now</a
+          >
+        </div>
+        <div class="col-lg-3 col-md-8 ps-item price mx-auto">
+          <div class="">
+            <h2 class=" ">Standard plan</h2>
+            <h2 class="orange">$40/Month</h2>
+            <span class=" ">SINGLE CLASS</span>
+          </div>
+          <div class="ps-price text-center pt-2 ms-4">
+           
+            
+          </div>
+          <p><b>ACCESS :</b></p>
+          <ul>
+            <li>Full gym equipment</li>
+            <li>Cardio and strength training areas</li>
+            <li>Access to all fitness classes</li>
+            <li>Personalized workout plans</li>
+        </ul>
+          <a
+            href=""
+            class="primary-btn2 pricing-btn text-center text-light text-decoration-none px-5 mt-2"
+            >Enroll Now</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- PRICING BAR END -->
+
+  <!-- CONTACT BAR START -->
+  <div class="contact-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/place.png" alt="" class="con-rt m-2" width="28px" style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              " />
+          <p class="text-light">
+            333 Middle Winchendon Rd, Rindge,
+            <br />
+            NH 03461
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/mobile-phone-with-buttons.png" alt="" style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              " class="con-rt m-2" width="28px" />
+          <p class="text-light mt-2">125-711-811 | 125-668-886</p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/mail1.png" alt="" style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              " class="con-rt m-2" width="30px" />
+          <p class="text-light mt-2">Support.fithub@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CONTACT BAR END -->
+
+  <!-- FOOTER START -->
+  <div class="footer">
+    <div class="container row mx-auto">
+      <div class="col-md-4">
+        <img src="img/logo.png" alt="" width="70%" />
+        <p class="pt-4 mt-1 text-light font4">
+          GYMS COMING SOON : KHARADI – PUNE - MAHARASHTRA| CHAKAN - PUNE - MAHARASHTRA| DIPHU - ASSAM | GURUGRAM - SECTOR 67 | BREACH CANDY - MUMBAI - MAHARASHTRA
+        </p>
+        <div class="pt-1">
+          <a href="https://www.facebook.com">
+            <img src="img/facebook.png" alt="" width="18px" class="" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+          <a href="https://www.twitter.com"><img src="img/twitter.png" alt="" width="15px" class="mx-1" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+          <a href="https://www.youtube.com"><img src="img/youtube.png" alt="" width="16px" class="mx-1" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+          <a href="https://www.instagram.com"><img src="img/instagram.png" alt="" width="13px" class="mx-1" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+          <a href="https://www.gmail.com"><img src="img/mail.png" alt="" width="18px" class="" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <h4 class="text-light">Useful links</h4>
+        <div class="mt-3">
+          <a href="" class="text-light text-decoration-none ft-link">About</a><br />
+        </div>
+        <div class="mt-2">
+          <a href="" class="text-light text-decoration-none ft-link mt-5">Blog</a><br />
+        </div>
+        <div class="mt-2">
+          <a href="" class="text-light text-decoration-none ft-link mt-5">Classes</a><br />
+        </div>
+        <div class="mt-2">
+          <a href="" class="text-light text-decoration-none ft-link mt-5">Contact</a>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <h4 class="text-light">Support</h4>
+        <div class="pt-3">
+          <a href="login.html" class="text-light text-decoration-none ft-link">Login</a><br />
+        </div>
+        <div class="mt-2">
+          <a href="" class="text-light text-decoration-none ft-link mt-5">My account</a><br />
+        </div>
+        <div class="mt-2">
+          <a href="" class="text-light text-decoration-none ft-link mt-5">Subscribe</a><br />
+        </div>
+        <div class="mt-2">
+          <a href="" class="text-light text-decoration-none ft-link mt-5">Contact</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h4 class="text-light">Tips & Guides</h4>
+        <div class="mt-3"></div>
+        <div>
+          <a href="#" class="text-decoration-none text-light ft-link">
+            <h6>
+              Physical fitness may help prevent depression,<br />
+              anxiety
+            </h6>
+          </a>
+          <p class="font2 text-light">3 min read | 20 Comment</p>
+          <hr class="bg-light" />
+        </div>
+        <div class="pb-3">
+          <a href="#" class="text-decoration-none text-light ft-link">
+            <h6>
+              Fitness: The best exercise to lose belly fat and tone up...
+            </h6>
+          </a>
+          <p class="font2 text-light">3 min read | 20 Comment</p>
+        </div>
+      </div>
+      <hr class="bg-light" />
+    </div>
+    <div class="pt-2 text-center">
+      <p class="text-light">
+        Copyright ©2023 All rights reserved | This template is made with
+        <span class="orange font3"> &hearts;</span> by TY-CSE
+      </p>
+    </div>
+  </div>
+  <!-- FOOTER END -->
+</body>
+
+</html>

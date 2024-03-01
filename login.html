@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitnessHub-Login</title>
+  <link rel="icon" href="img/text-logo.png" type="image/x-icon" width="40px">
+
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <!-- Testing -->
+  <style>
+    .bg {
+      padding-bottom: 139px;
+      background-image: url(img/back-login2.jpg);
+      background-size: cover;
+
+    }
+
+    .login {
+      background-color: rgba(0, 0, 0, 0.582);
+    }
+
+    .submit {
+      background-color: #f36100;
+    }
+
+    .submit:hover {
+      transition: all ease 0.4s;
+      color: black !important;
+    }
+
+    .bg-input {
+      border: 0px solid black;
+      background-color: rgba(255, 255, 255, 0.384);
+    }
+
+    .orange {
+      color: #f36100;
+    }
+
+    .logo {
+      padding-bottom: 100px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg">
+    <div class="container">
+      <img src="img/logo.png" alt="" class="logo mt-3 ms-3" width="180px">
+
+    </div>
+    <br><br>
+    <div class="col-md-12 row">
+      <div class="col-md-2  "></div>
+      <div class="col-md-4 login ">
+        <br><br>
+        <form action="">
+          <label for="emailAddress" class="ms-4 text-light ">Email</label> <br />
+          <input type="text" id="emailAddress" name="usr-name" size="46" class="ms-4 mt-2 py-2 bg-input" />
+
+          <label for="password" class="ms-4 mt-4 text-light ">Password</label> <br />
+          <input type="password" id="password" name="pass" size="46" class="ms-4 mt-2 py-2 bg-input" />
+
+          <div class="col-md-12 row mt-3">
+            <div class="col-md-5">
+              <input type="checkbox" id="save-pass" name="save-pass" class="ms-4" />
+              <label for="save-pass" class="ms-1 text-light">Stay Signed In</label>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+              <a href="#" class="text-decoration-none  ">Forgot Password?</a>
+            </div>
+          </div>
+        </form>
+        <br>
+        <div class="text-center pb-3">
+          <div id="loginButton"> <a href="#" class="text-decoration-none text-light submit px-5 py-2 shadow-lg"><b>Log
+                In</b></a></div>
+
+          <br><br>
+
+          <span class="text-light ">Don't have an account?</span> <a href="signup.html" class="text-decoration-none">
+            Sign up.
+          </a>
+        </div>
+
+
+      </div>
+      <div class="col-md-6 "></div>
+    </div>
+  </div>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAoSpfcUsFTeQaZkGdedeXmyJ_-c35dtyU",
+      authDomain: "final-project-b319f.firebaseapp.com",
+      projectId: "final-project-b319f",
+      storageBucket: "final-project-b319f.appspot.com",
+      messagingSenderId: "45250701658",
+      appId: "1:45250701658:web:ac76a37ed291d2184fab63",
+      measurementId: "G-26L0YN4TSW"
+    };
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    const analytics = getAnalytics(app);
+
+    const getFormValues = () => {
+      const password = document.getElementById('password').value || '';
+      const emailAddress = document.getElementById('emailAddress').value || ''
+
+      return {
+        password: password,
+        emailAddress: emailAddress,
+      }
+    }
+
+    const validateForm = () => {
+      const formData = getFormValues();
+      if (!formData.password || !formData.emailAddress
+      ) {
+        alert('Please fill in all the fields.');
+        return false;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.emailAddress)) {
+        alert('Please enter a valid email address.');
+        return false;
+      }
+
+      return true;
+    }
+
+    const submitForm = async () => {
+      if (!validateForm()) {
+        return;
+      }
+      const formData = getFormValues();
+      try {
+        const userCredential = await signInWithEmailAndPassword(auth, formData.emailAddress, formData.password);
+        const userId = userCredential.user.uid;
+        alert('Successfully logged you in')
+        window.location.href = '/index.html'
+        // const userDoc = await getDoc(doc(db, 'usersSignupData', userId));
+        // if (userDoc.exists()) {
+        //     // User details found in Firestore
+        //     const userData = userDoc.data();
+        //     console.log('User Details:', userData);
+        //     window.localStorage.setItem('userData', JSON.stringify(userData));
+        //     alert('Successfully logged you in')
+        // } else {
+        //     // User details not found
+        //     alert('User details not found.');
+        // }
+      } catch (error) {
+        alert('Error while logging you in: ' + error.message);
+      }
+    }
+
+    document.getElementById('loginButton').addEventListener('click', async (event) => {
+      event.stopPropagation();
+      await submitForm();
+      console.log('Form submitted successfully')
+    })
+
+
+
+
+  </script>
+</body>
+
+</html>

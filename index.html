@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessHub-Home</title>
+    <link rel="icon" href="img/text-logo.png" type="image/x-icon" width="40px">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+
+    <style>
+      .nav-bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+      }
+      .my-link:hover {
+        transition: all 0.3s;
+
+        color: #f36100 !important;
+      }
+      .font1 {
+        font-size: 64px;
+      }
+      .white {
+        color: white;
+      }
+      .orange {
+        color: #f36100;
+      }
+      .orangebg {
+        background-color: #f36100;
+      }
+      .primary-btn {
+        display: inline-block;
+        font-size: 14px;
+        padding: 17px 30px 16px;
+        background: #f36100;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all ease 0.2;
+      }
+      .primary-btn:active {
+        scale: 0.9;
+      }
+      .padding-nav {
+        padding: 250px 280px;
+      }
+
+      .choose {
+        background-color: #0a0a0a;
+        padding: 90px 80px;
+      }
+      .section-title {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .circle:hover {
+        filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(174deg)
+          brightness(103%) contrast(101%) !important;
+      }
+      .font2 {
+        font-weight: 12;
+      }
+      .font3 {
+        font-size: 22px;
+      }
+
+      .footer {
+        background-color: black;
+        padding-top: 55px;
+        padding-bottom: 25px;
+      }
+      .ft-link:hover {
+        color: #f36100 !important ;
+      }
+
+      .contact-bar {
+        background-color: #0a0a0a;
+        padding-top: 30px;
+        padding-right: 0px;
+        padding-bottom: 15px;
+        padding-left: 0px;
+      }
+      .con-rt {
+        float: left;
+      }
+
+      .banner-section {
+        height: 550px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .set-bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+      }
+      .banner-text1 {
+        color: white;
+        font-size: 35px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      .banner-text2 {
+        color: #c4c4c4;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 55px;
+      }
+      .banner-link {
+        border: #f36100 solid 2px;
+      }
+
+      .banner-link:hover {
+        transition: all 0.7s;
+
+        background-color: #f36100 !important;
+      }
+
+      .pricing-section {
+        background-color: #151515;
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      .pricing-section .section-title {
+        margin-bottom: 56px;
+      }
+      .ps-item {
+        text-align: center;
+        color: white;
+        padding: 40px 30px;
+        border: 1px solid #464646;
+        -webkit-transform: skewY(-4deg);
+        -ms-transform: skewY(-4deg);
+        transform: skewY(-4deg);
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      .ps-item .ps-price {
+        margin-bottom: 30px;
+        -webkit-transform: skewY(4deg);
+        -ms-transform: skewY(4deg);
+        transform: skewY(4deg);
+      }
+      .primary-btn2 {
+        display: inline-block;
+        font-size: 14px;
+        padding: 17px 30px 16px;
+        background: #333333;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all ease 0.2;
+      }
+      .primary-btn2:active {
+        scale: 0.9;
+      }
+      .ps-item .primary-btn2 .pricing-btn {
+        display: block;
+        background: #333333;
+        -webkit-transform: skewY(4deg);
+        -ms-transform: skewY(4deg);
+        transform: skewY(4deg);
+      }
+      .primary-btn2:hover {
+        background-color: #f36100 !important;
+      }
+      .price:hover {
+        color: black !important;
+        background-color: #c4c4c4 !important;
+      }
+
+      .team-section {
+        background: #151515;
+      }
+      .spad {
+        padding-top: 100px;
+        padding-bottom: 40px;
+      }
+      .container1 {
+        margin: 20px 40px;
+        color: white;
+      }
+      .profiles {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 20px;
+      }
+      .profile {
+        flex-basis: 260px;
+      }
+      .profile .profile-img {
+        height: 260px;
+        width: 260px;
+        border-radius: 50%;
+        filter: grayscale(100%);
+        cursor: pointer;
+        transition: 400ms;
+      }
+      .profile:hover .profile-img {
+        filter: grayscale(0);
+      }
+      .user-name {
+        margin-top: 30px;
+        font-size: 35px;
+      }
+      .profile h5 {
+        font-size: 18px;
+        font-weight: 100;
+        letter-spacing: 3px;
+        color: #f36100;
+      }
+      .profile p {
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: justify;
+        color: white;
+      }
+      .member{
+        background-color: #f36100;
+        border-radius: 4px;
+        box-shadow: 0 0 0px #f36100,
+        0 0 0px #f36100;
+      }
+      .member:hover{
+        transition: all 0.2s;
+
+        box-shadow: 0 0 5px #f36100,
+        0 0 25px #f36100;
+      }
+      .font4
+      {
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV BAR START -->
+    <div
+      class=" pt-5 nav-bg"
+      style="background-image: url(img/bg1.jpg)"
+    >
+      <div class="row ">
+        <div class="col-md-3 text-center">
+          <img src="img/logo.png" alt="gym logo" width="200px" />
+        </div>
+        <div class="col-md-6 pt-2">
+          <a
+            href="index.html"
+            class="text-decoration-none text-light my-link mx-3"
+          >
+            HOME</a
+          >
+          <a href="about.html" class="text-decoration-none text-light my-link mx-3">
+            ABOUT US</a
+          >
+          <a href="classes.html" class="text-decoration-none text-light my-link mx-3">
+            CLASSES</a
+          >
+          <a
+            href="services.html"
+            class="text-decoration-none text-light my-link mx-3"
+          >
+            SERVICES</a
+          >
+          <a href="team.html" class="text-decoration-none text-light my-link mx-3">
+            OUR TEAM</a
+          >
+           
+          <a href="contact.html" class="text-decoration-none text-light my-link mx-3">
+            CONTACT</a
+          >
+        </div>
+        <div class="col-md-2 text-center pt-3  ">
+          <a href="login.html" class="text-decoration-none text-dark member py-3 px-4" target="_blank"><b> BECOME A MEMBER </b></a>
+         </div>
+        <div class="col-md-1 text-center">
+          <a href="dashboard.html">
+            <img src="img/user.png" class="mb-5" alt=""  width="50px">
+          </a>
+        </div>
+      </div>
+
+      <div class="row padding-nav">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <span class="text-light">SHAPE YOUR BODY</span>
+          <h1 class="text-light font1 mt-2">
+            BE <strong class="orange">STRONG</strong> <br />
+            TRAINING HARD
+          </h1>
+          <a
+            href="about.html"
+            class="primary-btn text-decoration-none text-light mt-4"
+            >GET INFO</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- NAV BAR END -->
+
+    <!-- CHOOSE BAR START -->
+    <div class="choose text-center">
+      <span class="orange section-title">WHY CHOOSE US?</span>
+      <h2 class="text-light mt-1">PUSH YOUR LIMITS FORWARD</h2>
+
+      <div class="row mt-5">
+        <div class="col-md-3 pt-2">
+          <div class="text-center circle">
+            <img
+              src="img/exercise.png"
+              alt=""
+              width="40px"
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+            />
+          </div>
+          <h4 class="text-light pt-2 pb-1">Modern equipment</h4>
+          <p class="text-light font2">
+            Gym equipment is an integral part of any fitness facility. So, it's
+            important to ensure your facility has the up to date equipment.
+          </p>
+        </div>
+        <div class="col-md-3 pt-2">
+          <div class="text-center circle">
+            <img
+              src="img/juice.png"
+              alt=""
+              width="40px"
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+            />
+          </div>
+          <h4 class="text-light pt-2 pb-1">Healthy nutrition plan</h4>
+          <p class="text-light font2">
+            "Nutrition is far more responsible for creating your shape and your
+            health than you ever could have imagined."
+          </p>
+        </div>
+        <div class="col-md-3 pt-2">
+          <div class="text-center circle">
+            <img
+              src="img/dumbell.png"
+              alt=""
+              width="40px"
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+            />
+          </div>
+          <h4 class="text-light pt-2 pb-1">Proffesponal training plan</h4>
+          <p class="text-light font2">
+            Goals The goals you set in your professional development plan should
+            be SMART (Specific, Measurable, Achievable, Relevant and Timely).
+          </p>
+        </div>
+        <div class="col-md-3 pt-2">
+          <div class="text-center circle">
+            <img
+              src="img/wellness.png"
+              alt=""
+              width="40px"
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+            />
+          </div>
+          <h4 class="text-light pt-2 pb-1">Unique to your needs</h4>
+          <p class="text-light font2">
+            You know exercise is good for you. From boosting your mood to
+            improving your mental power, find out how exercise can improve your
+            life.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- CHOOSE BAR END -->
+
+    <!-- BANNER 2 START -->
+    <section
+      class="banner-section set-bg"
+      style="background-image: url(img/bg2.jpg)"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div>
+              <h2 class="banner-text1">REGISTRATION NOW TO GET MORE DEALS</h2>
+              <div class="banner-text2">
+                WHERE HEALTH, BEAUTY AND FITNESS MEET.
+              </div>
+              <a
+                href="#"
+                class="banner-link text-decoration-none p-3 text-light"
+              >
+                APPOINTMENT</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BANNER 2 END -->
+
+    <!-- PRICING BAR START -->
+    <section class="pricing-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title text-center">
+              <span class="orange">OUR PLAN</span>
+              <h2 class="text-light">CHOOSE YOUR PRICING PLAN</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-lg-3 col-md-8 ps-item price mx-auto">
+            <div class="">
+              <h3 class=" ">Basic plan</h3>
+              <h2 class="orange">1700 &#8377; /Month</h2>
+              <span class=" ">SINGLE CLASS</span>
+            </div>
+            <div class="ps-price text-center pt-2 ms-4">
+              
+            </div>
+            <p><b>ACCESS :</b></p>
+            <ul>
+              <li>Basic gym equipment</li>
+              <li>Cardio area</li>
+              <li>General fitness classes (if available)</li>
+              <li>Access to all fitness classes</li>
+              <li>Personalized workout plans</li>
+          </ul>
+              <a
+              href=""
+              class="primary-btn2 pricing-btn text-center text-light text-decoration-none  px-5 mt-2"
+              > Enroll Now</a
+            >
+          </div>
+          <div class="col-lg-3 col-md-8 ps-item price mx-auto">
+            <div class="">
+              <h2 class=" ">Standard plan</h2>
+              <h2 class="orange"> 3400 &#8377; /Month</h2>
+              <span class=" ">SINGLE CLASS</span>
+            </div>
+            <div class="ps-price text-center pt-2 ms-4">
+              
+              
+            </div>
+            <p><b>ACCESS :</b></p>
+            <ul>
+              <li>Full gym equipment</li>
+              <li>Cardio and strength training areas</li>
+              <li>Access to all fitness classes</li>
+              <li>Personalized workout plans</li>
+          </ul>
+            <a
+              href=""
+              class="primary-btn2 pricing-btn text-center text-light text-decoration-none px-5 mt-2"
+              >Enroll Now</a
+            >
+          </div>
+          <div class="col-lg-3 col-md-8 ps-item price mx-auto">
+            <div class="">
+              <h2>Premium Plan</h2>
+              <h2 class="orange"> 5100 &#8377; /Month</h2>
+              <span class=" ">SINGLE CLASS</span>
+            </div>
+            <div class="ps-price text-center pt-2 ms-4">
+              
+            </div>
+            <p><b>ACCESS :</b></p>
+            <ul>
+              <li>Exclusive access to all gym facilities</li>
+              <li>Priority scheduling for classes and trainers</li>
+              <li>Individualized training sessions</li>
+              <li>Nutritional counseling</li>
+          </ul>
+            <a
+              href=""
+              class="primary-btn2 pricing-btn text-center text-light text-decoration-none px-5 mt-2"
+              >Enroll Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PRICING BAR END -->
+
+    <!-- OUR TEAM START -->
+    <div class="team-section spad">
+      <div class="container">
+        <div class="col-md-12 row">
+          <div class="col-md-4">
+            <span class="orange">OUR TEAM</span>
+            <h2 class="text-light">TRAIN WITH EXPERTS</h2>
+          </div>
+          <div class="col-md-5"></div>
+          <div class="col-md-3">
+            <a
+              href="#"
+              class="banner-link text-decoration-none p-3 text-light"
+              style="float: right"
+            >
+              APPOINTMENT</a
+            >
+          </div>
+        </div>
+        <br /><br />
+        <div class=" ">
+          <div class="col-md-12 row">
+            <div class="profiles col-md-3 mx-auto">
+              <div class="profile">
+                <img src="img/yasmin3.jpg" class="profile-img" alt="" />
+
+                <h3 class="user-name text-light">Yasmin Karachi</h3>
+                <h5 class="">Head Trainer</h5>
+                <p>
+                  Yasmin Karachiwala, a fitness expert with 26 years of experience in the fitness industry and pioneer of 'Pilates' physical fitness system in India.
+                </p>
+              </div>
+            </div>
+
+            <div class="profiles col-md-3 mx-auto">
+              <div class="profile">
+                <img src="img/varun.jpeg" class="profile-img" alt="" />
+
+                <h3 class="user-name text-light">Varun Verma</h3>
+                <h5 class="">Fitness Manager</h5>
+                <p>
+                  Varun Verma is a prominent fitness athlete, model, and actor from Delhi, India. The journey of this fitness influencer started through modelling
+                </p>
+              </div>
+            </div>
+
+            <div class="profiles col-md-3 mx-auto">
+              <div class="profile">
+                <img src="img/vinod.jpeg" class="profile-img" alt="" />
+
+                <h3 class="user-name text-light">Vinod Channa </h3>
+                <h5 class="">Rehabilitation Trainer</h5>
+                <p>
+                  The top-notch fitness trainer who has got clients like John Abraham, Riteish Deshmukh, Harman Baweja, Shekhar Ravjiani, Raj Kundra
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" ">
+          <div class="col-md-12 row">
+            <div class="profiles col-md-3 mx-auto">
+              <div class="profile">
+                <img src="img/tarun.jpeg" class="profile-img" alt="" />
+
+                <h3 class="user-name text-light">Tarun Gill</h3>
+                <h5 class="">Fitness Coach</h5>
+                <p>
+                  Tarun Gill Tarun Gill, India's premier fitness marketing specialist, has a fan base of over 1 million people. He's also the founder of TG Talks Media
+                </p>
+              </div>
+            </div>
+
+            <div class="profiles col-md-3 mx-auto">
+              <div class="profile">
+                <img src="img/Gaurav-Taneja.jpg" class="profile-img" alt="" />
+
+                <h3 class="user-name text-light">Gaurav Taneja</h3>
+                <h5 class="">Group Fitness Instructor</h5>
+                <p>
+                  Gaurav Taneja has put highlights on his Instagram handle. The list goes like #Deshkadhoni, Cricket, Khushi, Rashi and dad, Imp events, T20 world cup, USA 2022
+                </p>
+              </div>
+            </div>
+
+            <div class="profiles col-md-3 mx-auto">
+              <div class="profile">
+                <img src="img/Radhika1-1.jpeg" class="profile-img" alt="" />
+
+                <h3 class="user-name text-light">Radhika Karle</h3>
+                <h5 class="">Specialized Trainer</h5>
+                <p>
+                  The Indian nutritionist, Pilates instructor and personal trainer Radhika Karle is a force. As the founder of Radhika's Balanced Body, she has established
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- OUR TEAM END -->
+
+    <!-- CONTACT BAR START -->
+    <div class="contact-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="img/place.png"
+              alt=""
+              class="con-rt m-2"
+              width="28px"
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+            />
+            <p class="text-light">
+              333 Middle Winchendon Rd, Rindge,
+              <br />
+              NH 03461
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="img/mobile-phone-with-buttons.png"
+              alt=""
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+              class="con-rt m-2"
+              width="28px"
+            />
+            <p class="text-light mt-2">125-711-811 | 125-668-886</p>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="img/mail1.png"
+              alt=""
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+              class="con-rt m-2"
+              width="30px"
+            />
+            <p class="text-light mt-2">Support.fithub@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACT BAR END -->
+
+    <!-- FOOTER START -->
+    <div class="footer">
+      <div class="container row mx-auto">
+        <div class="col-md-4">
+          <img src="img/logo.png" alt="" width="70%" />
+          <p class="pt-4 mt-1 text-light font4">
+            GYMS COMING SOON : KHARADI – PUNE - MAHARASHTRA| CHAKAN - PUNE - MAHARASHTRA| DIPHU - ASSAM | GURUGRAM - SECTOR 67 | BREACH CANDY - MUMBAI - MAHARASHTRA
+          </p>
+          <div class="pt-1">
+            <a href="https://www.facebook.com">
+              <img
+                src="img/facebook.png"
+                alt=""
+                width="18px"
+                class=""
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+            <a href="https://www.twitter.com"
+              ><img
+                src="img/twitter.png"
+                alt=""
+                width="15px"
+                class="mx-1"
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+            <a href="https://www.youtube.com"
+              ><img
+                src="img/youtube.png"
+                alt=""
+                width="16px"
+                class="mx-1"
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+            <a href="https://www.instagram.com"
+              ><img
+                src="img/instagram.png"
+                alt=""
+                width="13px"
+                class="mx-1"
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+            <a href="https://www.gmail.com"
+              ><img
+                src="img/mail.png"
+                alt=""
+                width="18px"
+                class=""
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-light">Useful links</h4>
+          <div class="mt-3">
+            <a href="" class="text-light text-decoration-none ft-link">About</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Blog</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Classes</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Contact</a
+            >
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <h4 class="text-light">Support</h4>
+          <div class="pt-3">
+            <a href="login.html" class="text-light text-decoration-none ft-link">Login</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >My account</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Subscribe</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Contact</a
+            >
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-light">Tips & Guides</h4>
+          <div class="mt-3"></div>
+          <div>
+            <a href="#" class="text-decoration-none text-light ft-link">
+              <h6>
+                Physical fitness may help prevent depression,<br />
+                anxiety
+              </h6>
+            </a>
+            <p class="font2 text-light">3 min read | 20 Comment</p>
+            <hr class="bg-light" />
+          </div>
+          <div class="pb-3">
+            <a href="#" class="text-decoration-none text-light ft-link">
+              <h6>
+                Fitness: The best exercise to lose belly fat and tone up...
+              </h6>
+            </a>
+            <p class="font2 text-light">3 min read | 20 Comment</p>
+          </div>
+        </div>
+        <hr class="bg-light" />
+      </div>
+      <div class="pt-2 text-center">
+        <p class="text-light">
+          Copyright ©2023 All rights reserved | This template is made with
+          <span class="orange font3"> &hearts;</span> by TY-CSE
+        </p>
+      </div>
+    </div>
+    <!-- FOOTER END -->
+  </body>
+</html>

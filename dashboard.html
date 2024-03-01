@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessHub-Dashboard</title>
+    <link rel="icon" href="img/text-logo.png" type="image/x-icon" width="40px">
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <style>
+        .nav-bg {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+        }
+
+        .my-link:hover {
+            transition: all 0.3s;
+
+            color: #f36100 !important;
+        }
+
+        .padding-nav {
+            padding-top: 160px;
+            padding-bottom: 160px;
+        }
+
+        .orange {
+            color: #f36100;
+        }
+
+        .contact-bar {
+            background-color: #0a0a0a;
+            padding-top: 30px;
+            padding-right: 0px;
+            padding-bottom: 15px;
+            padding-left: 0px;
+        }
+
+        .con-rt {
+            float: left;
+        }
+
+        .footer {
+            background-color: black;
+            padding-top: 55px;
+            padding-bottom: 25px;
+        }
+
+        .ft-link:hover {
+            color: #f36100 !important;
+        }
+
+        .contact-section {
+            background: #151515;
+            padding-top: 95px;
+            padding-bottom: 75px;
+        }
+
+        .contact-input {
+            border: 0.01em solid #363636;
+            color: #c4c4c4;
+            font-size: 15px;
+            background-color: transparent;
+            padding: 11px;
+            padding-left: 15px;
+            padding-right: 337px;
+            margin-bottom: 20px;
+        }
+
+        .contact-input2 {
+            border: 0.01em solid #363636;
+            color: #c4c4c4;
+            font-size: 15px;
+            background-color: transparent;
+            padding: 11px;
+            height: 100px;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .banner-link {
+            font-size: 14px;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 700;
+            width: 100%;
+            border: none;
+            padding: 14px 0 12px;
+            background: #f36100;
+
+        }
+
+        .member {
+            background-color: #f36100;
+            border-radius: 4px;
+            box-shadow: 0 0 0px #f36100,
+            0 0 0px #f36100;
+        }
+
+        .member:hover {
+            transition: all 0.2s;
+
+            box-shadow: 0 0 5px #f36100,
+            0 0 25px #f36100;
+        }
+        .banner-link button
+        {
+            font-size: 14px;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 700;
+            width: 100%;
+            border: none;
+            padding: 14px 0 12px;
+            background: #f36100;
+
+
+        }
+        .font4
+      {
+        font-size: 13px;
+      }
+    </style>
+</head>
+
+<body>
+<!-- NAV BAR START -->
+<div class="bg-danger pt-5 nav-bg" style="background-image: url(img/con-main.jpg)">
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <img src="img/logo.png" alt="gym logo" width="200px" />
+        </div>
+        <div class="col-md-7 pt-2  ">
+            <a href="index.html" class="text-decoration-none text-light my-link mx-3">
+                HOME</a>
+            <a href="about.html" class="text-decoration-none text-light my-link mx-3">
+                ABOUT US</a>
+            <a href="classes.html" class="text-decoration-none text-light my-link mx-3">
+                CLASSES</a>
+            <a href="services.html" class="text-decoration-none text-light my-link mx-3">
+                SERVICES</a>
+            <a href="team.html" class="text-decoration-none text-light my-link mx-3">
+                OUR TEAM</a>
+
+            <a href="contact.html" class="text-decoration-none text-light my-link mx-3">
+                CONTACT</a>
+
+            <a class="text-decoration-none text-light my-link mx-3" id="logout">
+                 LOGOUT</a>
+        </div>
+        <div class="col-md-1 text-center pt-2 ">
+         </div>
+        
+    </div>
+
+    <div class="row text-center padding-nav">
+        <h1 class="text-light">User Dashboard</h1>
+        <div class="row col-md-12">
+            <div class="col-md-5"></div>
+            <div class="col-md-2">
+                <a href="index.html" class="text-decoration-none text-light"><b> Login </b> ></a>
+                <p style="display: inline-block" class="orange">Dashboard</p>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+    </div>
+</div>
+<!-- NAV BAR END -->
+
+<!-- INFO BAR START -->
+<section class="contact-section">
+    <div class="container-fluid">
+        <div class="row px-5" style="color: white">
+
+            <div class="col-12 mb-2">
+                Name: <span id="name"></span>
+            </div>
+            <div class="col-12 mb-2">
+                Email: <span id="emailAddress"></span>
+            </div>
+            <div class="col-12 mb-2">
+                Weight: <span id="weight"></span>
+            </div>
+            <div class="col-12 mb-2">
+                Height: <span id="height"></span>
+            </div>
+            <div class="col-12 mb-2">
+                BMI: <span id="bmi"></span>
+            </div>
+            <div class="col-12 mb-2">
+                Age: <span id="age"></span>
+            </div>
+            <div class="col-12 mb-2">
+                Gender: <span id="gender"></span>
+            </div>
+            <div class="col-12 mb-2">
+                Address: <span id="address"></span>
+            </div>
+            <div class="col-12 mb-2">
+                Phone Number: <span id="phoneNumber"></span>
+            </div>
+            <div class="col-12 mb-2">
+                Is trainer required? <span id="trainer"></span>
+            </div>
+            <div class="col-12 mb-2">
+                First time gym? <span id="gym"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INFO BAR END -->
+
+<!-- CONTACT BAR START -->
+<div class="contact-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="img/place.png" alt="" class="con-rt m-2" width="28px" style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              " />
+                <p class="text-light">
+                    333 Middle Winchendon Rd, Rindge,
+                    <br />
+                    NH 03461
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img src="img/mobile-phone-with-buttons.png" alt="" style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              " class="con-rt m-2" width="28px" />
+                <p class="text-light mt-2">125-711-811 | 125-668-886</p>
+            </div>
+            <div class="col-md-4">
+                <img src="img/mail1.png" alt="" style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              " class="con-rt m-2" width="30px" />
+                <p class="text-light mt-2">Support.fithub@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CONTACT BAR END -->
+
+
+
+<!-- FOOTER START -->
+<div class="footer">
+    <div class="container row mx-auto">
+        <div class="col-md-4">
+            <img src="img/logo.png" alt="" width="70%" />
+            <p class="pt-4 mt-1 text-light font4">
+                GYMS COMING SOON : KHARADI – PUNE - MAHARASHTRA| CHAKAN - PUNE - MAHARASHTRA| DIPHU - ASSAM | GURUGRAM - SECTOR 67 | BREACH CANDY - MUMBAI - MAHARASHTRA
+            </p>
+            <div class="pt-1">
+                <a href="https://www.facebook.com">
+                    <img src="img/facebook.png" alt="" width="18px" class="" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+                <a href="https://www.twitter.com"><img src="img/twitter.png" alt="" width="15px" class="mx-1" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+                <a href="https://www.youtube.com"><img src="img/youtube.png" alt="" width="16px" class="mx-1" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+                <a href="https://www.instagram.com"><img src="img/instagram.png" alt="" width="13px" class="mx-1" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+                <a href="https://www.gmail.com"><img src="img/mail.png" alt="" width="18px" class="" style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                " /></a>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h4 class="text-light">Useful links</h4>
+            <div class="mt-3">
+                <a href="" class="text-light text-decoration-none ft-link">About</a><br />
+            </div>
+            <div class="mt-2">
+                <a href="" class="text-light text-decoration-none ft-link mt-5">Blog</a><br />
+            </div>
+            <div class="mt-2">
+                <a href="" class="text-light text-decoration-none ft-link mt-5">Classes</a><br />
+            </div>
+            <div class="mt-2">
+                <a href="" class="text-light text-decoration-none ft-link mt-5">Contact</a>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <h4 class="text-light">Support</h4>
+            <div class="pt-3">
+                <a href="login.html" class="text-light text-decoration-none ft-link">Login</a><br />
+            </div>
+            <div class="mt-2">
+                <a href="" class="text-light text-decoration-none ft-link mt-5">My account</a><br />
+            </div>
+            <div class="mt-2">
+                <a href="" class="text-light text-decoration-none ft-link mt-5">Subscribe</a><br />
+            </div>
+            <div class="mt-2">
+                <a href="" class="text-light text-decoration-none ft-link mt-5">Contact</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h4 class="text-light">Tips & Guides</h4>
+            <div class="mt-3"></div>
+            <div>
+                <a href="#" class="text-decoration-none text-light ft-link">
+                    <h6>
+                        Physical fitness may help prevent depression,<br />
+                        anxiety
+                    </h6>
+                </a>
+                <p class="font2 text-light">3 min read | 20 Comment</p>
+                <hr class="bg-light" />
+            </div>
+            <div class="pb-3">
+                <a href="#" class="text-decoration-none text-light ft-link">
+                    <h6>
+                        Fitness: The best exercise to lose belly fat and tone up...
+                    </h6>
+                </a>
+                <p class="font2 text-light">3 min read | 20 Comment</p>
+            </div>
+        </div>
+        <hr class="bg-light" />
+    </div>
+    <div class="pt-2 text-center">
+        <p class="text-light">
+            Copyright ©2023 All rights reserved | This template is made with
+            <span class="orange font3"> &hearts;</span> by TY-CSE
+        </p>
+    </div>
+</div>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAoSpfcUsFTeQaZkGdedeXmyJ_-c35dtyU",
+        authDomain: "final-project-b319f.firebaseapp.com",
+        projectId: "final-project-b319f",
+        storageBucket: "final-project-b319f.appspot.com",
+        messagingSenderId: "45250701658",
+        appId: "1:45250701658:web:ac76a37ed291d2184fab63",
+        measurementId: "G-26L0YN4TSW"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    function displayUserData(userData) {
+        // Update your dashboard HTML elements with user data
+        // For example:
+        document.getElementById('name').textContent = `${userData.firstName} ${userData.lastName}`;
+        document.getElementById('emailAddress').textContent = userData.emailAddress;
+        document.getElementById('weight').textContent = `${userData.weight} kg`;
+        document.getElementById('height').textContent = `${userData.height} cm`;
+        document.getElementById('bmi').textContent = userData.bmi;
+        document.getElementById('age').textContent = `${userData.age} years`;
+        document.getElementById('gender').textContent = userData.gender;
+        document.getElementById('address').innerHTML = `${userData.streetAddress}, </br> ${userData.streetAddressLine2} </br> ${userData.city} - ${userData.state} </br> ${userData.postalCode}`;
+        document.getElementById('phoneNumber').textContent = userData.phoneNumber;
+        document.getElementById('trainer').textContent = userData.trainer;
+        document.getElementById('gym').textContent = `${userData.gym}`;
+        // Update other dashboard elements as needed
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Check if the user is logged in
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                // User is signed in
+                const userId = user.uid;
+
+                // Fetch user details from Firestore using the user ID
+                const userDoc = await getDoc(doc(db, 'usersSignupData', userId));
+
+                if (userDoc.exists()) {
+                    // User details found in Firestore
+                    const userData = userDoc.data();
+
+                    // Display user data on the dashboard
+                    displayUserData(userData);
+                } else {
+                    alert('User details not found.');
+                }
+            } else {
+                alert('You were logged out.');
+                window.location.href = '/login.html'; // Change to your login page
+            }
+        });
+
+        // Logout button event listener
+        document.getElementById('logout').addEventListener('click', async () => {
+            try {
+                // Sign out the user
+                await signOut(auth);
+            } catch (error) {
+                // Handle errors, display an alert, or log them
+                alert('Error signing out: ' + error.message);
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessHub-Classes</title>
+    <link rel="icon" href="img/text-logo.png" type="image/x-icon" width="40px">
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <style>
+      .nav-bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+      }
+      .my-link:hover {
+        transition: all 0.3s;
+
+        color: #f36100 !important;
+      }
+      .padding-nav {
+        padding-top: 160px;
+        padding-bottom: 160px;
+      }
+      .bg-black
+      {
+        background-color: black;
+      }
+      .orange {
+        color: #f36100;
+      }
+      .bg-orange{
+        background-color: #f36100;
+      }
+      .contact-bar {
+        background-color: #0a0a0a;
+        padding-top: 30px;
+        padding-right: 0px;
+        padding-bottom: 15px;
+        padding-left: 0px;
+      }
+      .con-rt {
+        float: left;
+      }
+      .footer {
+        background-color: black;
+        padding-top: 55px;
+        padding-bottom: 25px;
+      }
+      .ft-link:hover {
+        color: #f36100 !important ;
+      }
+      .detail {
+        background-color: #151515;
+        padding-top: 90px;
+        padding-bottom: 40px;
+      }
+      .vish{
+        background-image: url(img/vishal.jpg);
+        background-repeat: no-repeat;
+        background-size: 230px 335px;
+       }
+      .class-bg {
+        padding-top: 85px;
+        background-image: url(img/latest-1.jpg.webp);
+        padding-bottom: 10px;
+      }
+      .grey {
+        color: rgb(163, 163, 163);
+      }
+      .table
+      {
+        background-color: #151515;
+        padding-top: 30px;
+        padding-bottom: 80px;
+        margin: 0;
+      
+      }
+      .tb-border{
+        border: 1px solid black;
+      }
+      .tb-border1{
+        border: 1px solid rgb(61, 61, 61);
+      }
+      .tb-text{
+        color:#2a2a28;
+      }
+      .tb-text:hover{
+        transition: all 0.5s;
+
+        color:white !important;
+      }
+      .clr1
+      {
+        background-color: #0a0a0a;
+      }
+      .clr2
+      {
+        background-color: #151515;
+      }
+      .member{
+        background-color: #f36100;
+        border-radius: 4px;
+        box-shadow: 0 0 0px #f36100,
+        0 0 0px #f36100;
+      }
+      .member:hover{
+        transition: all 0.2s;
+
+        box-shadow: 0 0 5px #f36100,
+        0 0 25px #f36100;
+      }
+      .font4
+      {
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV BAR START -->
+    <div
+      class="bg-danger pt-5 nav-bg"
+      style="background-image: url(img/breadcrumb-bg.jpg.webp)"
+    >
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <img src="img/logo.png" alt="gym logo" width="200px" />
+        </div>
+        <div class="col-md-6 pt-2">
+          <a
+            href="index.html"
+            class="text-decoration-none text-light my-link mx-3"
+          >
+            HOME</a
+          >
+          <a
+            href="about.html"
+            class="text-decoration-none text-light my-link mx-3"
+          >
+            ABOUT US</a
+          >
+          <a
+            href="classes.html"
+            class="text-decoration-none text-light my-link mx-3"
+          >
+            CLASSES</a
+          >
+          <a
+            href="services.html"
+            class="text-decoration-none text-light my-link mx-3"
+          >
+            SERVICES</a
+          >
+          <a
+            href="team.html"
+            class="text-decoration-none text-light my-link mx-3"
+          >
+            OUR TEAM</a
+          >
+          
+          <a
+            href="contact.html"
+            class="text-decoration-none text-light my-link mx-3"
+          >
+            CONTACT</a
+          >
+        </div>
+           <div class="col-md-2 text-center pt-3 ">
+            <a href="login.html" target="_blank" class="text-decoration-none text-dark member py-3 px-4"><b> BECOME A MEMBER </b></a>
+         </div>
+         <div class="col-md-1 text-center">
+          <a href="dashboard.html">
+            <img src="img/user.png" class="mb-5" alt=""  width="50px">
+          </a>
+        </div>
+      </div>
+
+      <div class="row text-center padding-nav">
+        <h1 class="text-light">CLASSES DETAILS</h1>
+        <div class="row col-md-12">
+          <div class="col-md-5"></div>
+          <div class="col-md-2">
+            <a href="index.html" class="text-decoration-none text-light"
+              ><b> Home </b> ></a
+            >
+            <p style="display: inline-block" class="orange">Classes</p>
+          </div>
+          <div class="col-md-5"></div>
+        </div>
+      </div>
+    </div>
+    <!-- NAV BAR END -->
+
+    <!-- DETAILS BAR START -->
+    <section class="detail">
+      <div class="col-md-12 container row mx-auto">
+        <div class="col-md-8 mx-auto text-light">
+          <img
+            src="img/class-detailsl.jpg.webp"
+            alt=""
+            width="100%"
+            class="pb-5"
+          />
+
+          <h3>BODY BUILDING</h3>
+
+          <p class="pt-2 pb-4">
+            Bodybuilding is a great way to keep yourself balanced, giving your body proportion, 
+            shaping and helping general fitness. Not only does body building improve your physical 
+            condition, it can also lead to mental health benefits, 
+            giving you a clearer state of mind thanks to weight training and aerobic exercise
+          </p>
+
+          <h3>TRAINER</h3>
+
+          <p class="pt-2">
+            What makes someone a good trainer? Certainly experience in doing a job is part of it;
+             however, a good trainer needs more than just experience. Other skills need to be
+              part of an effective trainer’s “bag of tricks.” 
+          </p>
+
+          <div class="col-md-12 row pt-3">
+            <div class="col-md-5">
+              <img src="img/team-4.jpg" alt="" width="90%" />
+            </div>
+            <div class="col-md-7">
+              <div class="col-md-12 row">
+                
+                <div class="col-md-8">
+                  <h4>Marilyn Lewis</h4>
+                  <span>SPECIALIZED TRAINER</span>
+                </div>
+                <div class="col-md-4">
+                  <div class="pt-4">
+                    <a href="https://www.facebook.com">
+                      <img
+                        src="img/facebook.png"
+                        alt=""
+                        width="18px"
+                        class=""
+                        style="
+                          filter: invert(100%) sepia(100%) saturate(1%)
+                            hue-rotate(311deg) brightness(104%) contrast(101%);
+                        "
+                    /></a>
+                    <a href="https://www.twitter.com"
+                      ><img
+                        src="img/twitter.png"
+                        alt=""
+                        width="15px"
+                        class="mx-1"
+                        style="
+                          filter: invert(100%) sepia(100%) saturate(1%)
+                            hue-rotate(311deg) brightness(104%) contrast(101%);
+                        "
+                    /></a>
+                    <a href="https://www.youtube.com"
+                      ><img
+                        src="img/youtube.png"
+                        alt=""
+                        width="16px"
+                        class="mx-1"
+                        style="
+                          filter: invert(100%) sepia(100%) saturate(1%)
+                            hue-rotate(311deg) brightness(104%) contrast(101%);
+                        "
+                    /></a>
+                    <a href="https://www.instagram.com"
+                      ><img
+                        src="img/instagram.png"
+                        alt=""
+                        width="13px"
+                        class="mx-1"
+                        style="
+                          filter: invert(100%) sepia(100%) saturate(1%)
+                            hue-rotate(311deg) brightness(104%) contrast(101%);
+                        "
+                    /></a>
+                    <a href="https://www.gmail.com"
+                      ><img
+                        src="img/mail.png"
+                        alt=""
+                        width="18px"
+                        class=""
+                        style="
+                          filter: invert(100%) sepia(100%) saturate(1%)
+                            hue-rotate(311deg) brightness(104%) contrast(101%);
+                        "
+                    /></a>
+                  </div>
+                </div>
+                <div class="px-2">
+                  <p class="pt-3">
+                    The top-notch fitness trainer who has got clients like John Abraham, Riteish Deshmukh, Harman Baweja, Shekhar Ravjiani, Raj Kundra
+                  </p>
+                  <div class="col-md-12 row">
+                    <div class="col-md-6">
+                      <p><b>Age</b></p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>35</p>
+                    </div>
+                    <hr class="text-light" />
+                  </div>
+
+                  <div class="col-md-12 row">
+                    <div class="col-md-6">
+                      <p><b>Weight</b></p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>148lbs</p>
+                    </div>
+                    <hr class="text-light" />
+                  </div>
+
+                  <div class="col-md-12 row">
+                    <div class="col-md-6">
+                      <p><b>Height</b></p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>10'2``</p>
+                    </div>
+                    <hr class="text-light" />
+                  </div>
+
+                  <div class="col-md-12 row">
+                    <div class="col-md-6">
+                      <p><b>Occupation</b></p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>no-founder</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 px-5 text-light mx-auto">
+          <h5>CATEGORIES</h5>
+
+          <div>
+            <div class="col-md-12 row my-link pt-4">
+              <div class="col-md-4"><p>Yoga</p></div>
+              <div class="col-md-7"></div>
+              <div class="col-md-1">12</div>
+            </div>
+            <div class="col-md-12 row my-link pt-1">
+              <div class="col-md-4"><p>Running</p></div>
+              <div class="col-md-7"></div>
+              <div class="col-md-1">32</div>
+            </div>
+            <div class="col-md-12 row my-link pt-1">
+              <div class="col-md-4"><p>Weightloss</p></div>
+              <div class="col-md-7"></div>
+              <div class="col-md-1">86</div>
+            </div>
+            <div class="col-md-12 row my-link pt-1">
+              <div class="col-md-4"><p>Cario</p></div>
+              <div class="col-md-7"></div>
+              <div class="col-md-1">25</div>
+            </div>
+            <div class="col-md-12 row my-link pt-1">
+              <div class="col-md-6"><p>Body building</p></div>
+              <div class="col-md-5"></div>
+              <div class="col-md-1">36</div>
+            </div>
+            <div class="col-md-12 row my-link pt-1">
+              <div class="col-md-4"><p>Nutrition</p></div>
+              <div class="col-md-7"></div>
+              <div class="col-md-1">15</div>
+            </div>
+          </div>
+
+          <h5 class="pt-4">LATEST POST</h5>
+          <br />
+          <div class="class-bg mt-2">
+            <div class="col-md-11 mx-auto">
+              <h5>
+                <a href="#" class="text-decoration-none text-light">
+                  This Japanese Way of Making iced Coffee is a Game...
+                </a>
+              </h5>
+              <p class="grey">Aug 20, 2023 | 20 Comment</p>
+            </div>
+          </div>
+
+          <div class="col-md-12 row pt-4">
+            <div class="col-md-4">
+              <img src="img/latest-2.jpg.webp" alt="" width="100px" />
+            </div>
+            <div class="col-md-8">
+              <h6>
+                <a href="#" class="text-decoration-none text-light">
+                  Grilled Potato and Green Bean Salad
+                </a>
+              </h6>
+              <span class="grey">Aug 15, 2023</span>
+            </div>
+          </div>
+
+          <div class="col-md-12 row pt-4">
+            <div class="col-md-4">
+              <img src="img/latest-3.jpg.webp" alt="" width="100px" />
+            </div>
+            <div class="col-md-8">
+              <h6>
+                <a href="#" class="text-decoration-none text-light">
+                  The &dollar;8 French Rose i Buy in Bulk Every summer
+                </a>
+              </h6>
+              <span class="grey">Aug 15, 2023</span>
+            </div>
+          </div>
+
+          <div class="col-md-12 row pt-4">
+            <div class="col-md-4">
+              <img src="img/latest-4.jpg.webp" alt="" width="100px" />
+            </div>
+            <div class="col-md-8">
+              <h6>
+                <a href="#" class="text-decoration-none text-light">
+                  ina Graten's Skillet-Roasted Lemon Chicken
+                </a>
+              </h6>
+              <span class="grey">Aug 15, 2023</span>
+            </div>
+          </div>
+
+          <div class="col-md-12 row pt-4">
+            <div class="col-md-4">
+              <img src="img/latest-5.jpg.webp" alt="" width="100px" />
+            </div>
+            <div class="col-md-8">
+              <h6>
+                <a href="#" class="text-decoration-none text-light">
+                  The Best Weeknight Baked Potatoes, 3 Creative Ways
+                </a>
+              </h6>
+              <span class="grey">Aug 15, 2019</span>
+            </div>
+            <div class="pt-4">
+
+              <div class="vish text-light pb-1 ps-3">
+                <br><br><br><br><br><br><br>
+                <br><br><br><br><br>
+                <h5>Ex Trainer</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- DETAILS BAR END -->
+
+    <!-- TIMETABLE BAR START -->
+
+    <div class="table">
+
+      <div class="container row text-light   mx-auto">
+        <h5>CLASSES TIMETABLE</h5>
+        <div class="row pt-3">
+          <div class="col-md-12">
+            <div>
+              <table class="tb-border1">
+                <thead>
+                  <tr class="text-light">
+                    <th class="px-5 py-3 bg-orange tb-border orange"> Time</th>
+                    <th class="px-5 py-3 bg-orange tb-border">Monday</th>
+                    <th class="px-5 py-3 bg-orange tb-border">Tuesday</th>
+                    <th class="px-5 py-3 bg-orange tb-border">Wednesday</th>
+                    <th class="px-5 py-3 bg-orange tb-border">Thursday</th>
+                    <th class="px-5 py-3 bg-orange tb-border">Friday</th>
+                    <th class="px-5 py-3 bg-orange tb-border">Saturday</th>
+                    <th class="px-5 py-3 bg-orange tb-border">Sunday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-center ">
+                    <td class="py-4 bg-black orange tb-border1">6.00am - 8.00am</td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>WEIGHT LOOSE</h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5> CARDIO</h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>  YOGA</h5>
+                      <span>Keaf Shen</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5>FITNESS  </h5>
+                      <span>Kimberly Stone</span>
+                    </td>
+                    <td class="py-4 clr1 tb-text">-</td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5>  BOXING</h5>
+                      <span>Kimberly Stone</span>
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>BODY BUILDING</h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td class="py-4 bg-black orange tb-border1">9.00am - 10.00am</td>
+                    <td class="py-4 clr2 tb-text">
+                      -
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5> FITNESS</h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5>  WEIGHT LOOSE</h5>
+                      <span>Keaf Shen</span>
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>CARDIO  </h5>
+                      <span>Kimberly Stone</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5>BOXING  </h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>  KARATE</h5>
+                      <span>Kimberly Stone</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      -
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td class="py-4 bg-black orange tb-border1">5.00pm - 7.00pm</td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>  BOXING</h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5> KARATE</h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>  BODY BUILDING</h5>
+                      <span>Keaf Shen</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      -
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>YOGA  </h5>
+                      <span>Kimberly Stone</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5>  CARDIO</h5>
+                      <span>Kimberly Stone</span>
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>FITNESS  </h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td class="py-4 bg-black orange tb-border1">7.00pm - 9.00pm</td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5> CARDIO</h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                       -
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5>  BOXING</h5>
+                      <span>Keaf Shen</span>
+                    </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>YOGA  </h5>
+                      <span>Kimberly Stone</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5>  KARATE</h5>
+                      <span>Kimberly Stone</span>
+                     </td>
+                    <td class="py-4 clr1 tb-text">
+                      <h5>  BOXING</h5>
+                      <span>Kimberly Stone</span>
+                    </td>
+                    <td class="py-4 clr2 tb-text">
+                      <h5>   WEIGHT LOOSE</h5>
+                      <span>RLefew D. Loee</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- TIMETABLE BAR END -->
+     <!-- CONTACT BAR START -->
+    <div class="contact-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="img/place.png"
+              alt=""
+              class="con-rt m-2"
+              width="28px"
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+            />
+            <p class="text-light">
+              333 Middle Winchendon Rd, Rindge,
+              <br />
+              NH 03461
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="img/mobile-phone-with-buttons.png"
+              alt=""
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+              class="con-rt m-2"
+              width="28px"
+            />
+            <p class="text-light mt-2">125-711-811 | 125-668-886</p>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="img/mail1.png"
+              alt=""
+              style="
+                filter: invert(39%) sepia(23%) saturate(7243%) hue-rotate(10deg)
+                  brightness(104%) contrast(101%);
+              "
+              class="con-rt m-2"
+              width="30px"
+            />
+            <p class="text-light mt-2">Support.fithub@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACT BAR END -->
+
+    <!-- FOOTER START -->
+    <div class="footer">
+      <div class="container row mx-auto">
+        <div class="col-md-4">
+          <img src="img/logo.png" alt="" width="70%" />
+          <p class="pt-4 mt-1 text-light font4">
+            GYMS COMING SOON : KHARADI – PUNE - MAHARASHTRA| CHAKAN - PUNE - MAHARASHTRA| DIPHU - ASSAM | GURUGRAM - SECTOR 67 | BREACH CANDY - MUMBAI - MAHARASHTRA
+
+          </p>
+          <div class="pt-1">
+            <a href="https://www.facebook.com">
+              <img
+                src="img/facebook.png"
+                alt=""
+                width="18px"
+                class=""
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+            <a href="https://www.twitter.com"
+              ><img
+                src="img/twitter.png"
+                alt=""
+                width="15px"
+                class="mx-1"
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+            <a href="https://www.youtube.com"
+              ><img
+                src="img/youtube.png"
+                alt=""
+                width="16px"
+                class="mx-1"
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+            <a href="https://www.instagram.com"
+              ><img
+                src="img/instagram.png"
+                alt=""
+                width="13px"
+                class="mx-1"
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+            <a href="https://www.gmail.com"
+              ><img
+                src="img/mail.png"
+                alt=""
+                width="18px"
+                class=""
+                style="
+                  filter: invert(100%) sepia(100%) saturate(1%)
+                    hue-rotate(311deg) brightness(104%) contrast(101%);
+                "
+            /></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h4 class="text-light">Useful links</h4>
+          <div class="mt-3">
+            <a href="" class="text-light text-decoration-none ft-link">About</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Blog</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Classes</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Contact</a
+            >
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <h4 class="text-light">Support</h4>
+          <div class="pt-3">
+            <a href="login.html" class="text-light text-decoration-none ft-link">Login</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >My account</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Subscribe</a
+            ><br />
+          </div>
+          <div class="mt-2">
+            <a href="" class="text-light text-decoration-none ft-link mt-5"
+              >Contact</a
+            >
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-light">Tips & Guides</h4>
+          <div class="mt-3"></div>
+          <div>
+            <a href="#" class="text-decoration-none text-light ft-link">
+              <h6>
+                Physical fitness may help prevent depression,<br />
+                anxiety
+              </h6>
+            </a>
+            <p class="font2 text-light">3 min read | 20 Comment</p>
+            <hr class="bg-light" />
+          </div>
+          <div class="pb-3">
+            <a href="#" class="text-decoration-none text-light ft-link">
+              <h6>
+                Fitness: The best exercise to lose belly fat and tone up...
+              </h6>
+            </a>
+            <p class="font2 text-light">3 min read | 20 Comment</p>
+          </div>
+        </div>
+        <hr class="bg-light" />
+      </div>
+      <div class="pt-2 text-center">
+        <p class="text-light">
+          Copyright ©2023 All rights reserved | This template is made with
+          <span class="orange font3"> &hearts;</span> by TY-CSE
+        </p>
+      </div>
+    </div>
+    <!-- FOOTER END -->
+  </body>
+</html>
